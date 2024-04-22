@@ -17,12 +17,25 @@ public class Main {
         jules.move();
         jules.fly();
 
+        Animal joel = new Animal("joel.jpg", "Joel", 2) {
+            @Override
+            public void move() {
+                    System.out.println("Hamster is running in the Wheel!");
+            }
+
+            @Override
+            public void makeSound() {
+                System.out.println("Very tiny hamster noises");
+            }
+        };
+
         List<Animal> animals = new ArrayList<>();
         animals.add(bengie);
         animals.add(jeremy);
         animals.add(whiskers);
         animals.add(george);
         animals.add(jules);
+        animals.add(joel);
 
         List<IFlyable> flyables = new ArrayList<>();
         flyables.add(jules);
